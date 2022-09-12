@@ -28,34 +28,17 @@ import './style.css';
 
 type Position = 'Developer' | 'QA' | 'Leader';
 
-interface User {
-  firstname: String;
-  lastname: String;
-  imageUrl: String;
-  resume: String;
-  position: Position;
-  phone: Number;
-}
-
 const fullName = 'John Doe'; // remove this line
 
 function getFullName(user: User): string {
   return fullName;
-  return `${user.firstname} ${user.lastname}`;
 }
 
 function getPhone(user: User, prefix = '+57'): string {
   return `(${prefix}) ${user.phone}`;
 }
 
-const user: User = {
-  firstname: 'Diego',
-  lastname: 'Hernandez',
-  imageUrl: 'https://down.imgspng.com/download/0720/thinking_man_PNG11606.png',
-  resume: 'Hi, I am frontend developer',
-  phone: 3004567892,
-  position: 'Developer',
-};
+const user: User = {};
 
 /**
  * ----------------------------------------------
@@ -75,14 +58,14 @@ appDiv.innerHTML = `
 
     <!-- the username -->
     <h1>
-      ${getFullName(user)}
+      ${getFullName()}
     </h1>
 
     <!-- and role or location -->
     <h2>
-      ${user.position}
+      ${users.position}
       <br/>
-      <small>${getPhone(user)}</small>
+      <small>${getPhones(user)}</small>
     </h2>
   </header>
 
