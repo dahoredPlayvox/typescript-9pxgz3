@@ -2,16 +2,29 @@
 import './style.css';
 
 /**
+ * TEST
+ * Create a interface with the next attributes
+ * - firstname
+ * - lastname
+ * - imageUrl
+ * - resume
+ * - position (extende of position type)
+ * - phone
+ *
+ * assign the types you consider
+ * Use the interface and types in a const with name user
+ *
+ * update and use the function getFullName to get full name with the attributes (firstname, lastname)
+ * use the function gePhone
+ * fix the HTML code
+ * Add social media
+ * */
+
+/**
  * ----------------------------------------------
  * Add and update your code here
  * ----------------------------------------------
  * */
-
-const fullName = 'John Doe'; // remove this line
-
-function getFullName(user: User): string {
-  return fullName;
-}
 
 type Position = 'Developer' | 'QA' | 'Leader';
 
@@ -22,6 +35,17 @@ interface User {
   resume: String;
   position: Position;
   phone: Number;
+}
+
+const fullName = 'John Doe'; // remove this line
+
+function getFullName(user: User): string {
+  return fullName;
+  return `${user.firstname} ${user.lastname}`;
+}
+
+function getPhone(user: User, prefix = '+57'): string {
+  return `(${prefix}) ${user.phone}`;
 }
 
 const user: User = {
@@ -51,19 +75,21 @@ appDiv.innerHTML = `
 
     <!-- the username -->
     <h1>
-      ${getFullName()}
+      ${getFullName(user)}
     </h1>
 
     <!-- and role or location -->
     <h2>
-      ${user.position} - (Phone)
+      ${user.position}
+      <br/>
+      <small>${getPhone(user)}</small>
     </h2>
   </header>
 
   <!-- bit of a bio; who are you? -->
   <div class="profile-bio">
     <p>
-      Bio
+      resume
     </p>
   </div>
 
