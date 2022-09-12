@@ -7,11 +7,13 @@ import './style.css';
  * ----------------------------------------------
  * */
 
+const fullName = 'John Doe'; // remove this line
+
 function getFullName(user: User): string {
   return fullName;
 }
 
-type Position = 'Developer' | 'QA';
+type Position = 'Developer' | 'QA' | 'Leader';
 
 interface User {
   firstname: String;
@@ -30,8 +32,6 @@ const user: User = {
   phone: 3004567892,
   position: 'Developer',
 };
-
-const fullName = 'John Doe';
 
 /**
  * ----------------------------------------------
