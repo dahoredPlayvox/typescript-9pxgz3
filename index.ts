@@ -1,11 +1,23 @@
 // Import stylesheets
 import './style.css';
 
+/**
+ * ----------------------------------------------
+ * Add and update your code here
+ * ----------------------------------------------
+ * */
+
 const fullName = 'John Doe';
 
 function getFullName(user: User): string {
   return fullName;
 }
+
+/**
+ * ----------------------------------------------
+ * Add and update your code here
+ * ----------------------------------------------
+ * */
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
