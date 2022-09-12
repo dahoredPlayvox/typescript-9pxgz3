@@ -1,20 +1,11 @@
 // Import stylesheets
 import './style.css';
 
-interface User {
-  id: Number;
-  firstname: String;
-  lastname: String;
-  imageUrl?: String;
-}
-
-const user: User = {
-  id: 1,
-  firstname: 'Diego',
-  lastname: 'Hernandez',
-};
-
 const fullName = 'John Doe';
+
+function getFullName(user: User): string {
+  return fullName;
+}
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
@@ -28,7 +19,7 @@ appDiv.innerHTML = `
 
     <!-- the username -->
     <h1>
-      ${fullName}
+      ${getFullName()}
     </h1>
 
     <!-- and role or location -->
@@ -47,24 +38,18 @@ appDiv.innerHTML = `
   <!-- some social links to show off -->
   <ul class="profile-social-links">
     <li>
-      <a target="_blank" href="https://www.facebook.com/creativedonut">
+      <a target="_blank" href="https://www.facebook.com/">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
-      <a target="_blank" href="https://twitter.com/dropyourbass">
+      <a target="_blank" href="https://twitter.com/">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
-      <a target="_blank" href="https://github.com/vipulsaxena">
+      <a target="_blank" href="https://github.com/">
         <i class="fa fa-github"></i>
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://www.behance.net/vipulsaxena">
-       
-        <i class="fa fa-behance"></i>
       </a>
     </li>
   </ul>
