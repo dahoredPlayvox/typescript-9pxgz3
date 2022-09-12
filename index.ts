@@ -3,14 +3,18 @@ import './style.css';
 
 interface User {
   id: Number;
-  name: String;
+  firstname: String;
+  lastname: String;
   imageUrl?: String;
 }
 
 const user: User = {
   id: 1,
-  name: 'Diego Hernandez',
+  firstname: 'Diego',
+  lastname: 'Hernandez',
 };
+
+const fullName = 'John Doe';
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
@@ -19,24 +23,24 @@ appDiv.innerHTML = `
   <header>
     <!-- here’s the avatar -->
     <a target="_blank" href="#">
-      <img src="http://lorempixel.com/150/150/people/" class="hoverZoomLink">
+      <img src="https://down.imgspng.com/download/0720/thinking_man_PNG11606.png" class="hoverZoomLink">
     </a>
 
     <!-- the username -->
     <h1>
-      John Doe
+      ${fullName}
     </h1>
 
     <!-- and role or location -->
     <h2>
-      Better Visuals
+      Position
     </h2>
   </header>
 
   <!-- bit of a bio; who are you? -->
   <div class="profile-bio">
     <p>
-      It takes monumental improvement for us to change how we live our lives. Design is the way we access that improvement.
+      Bio
     </p>
   </div>
 

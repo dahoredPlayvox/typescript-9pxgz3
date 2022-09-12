@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
 html {
   height: 100%;
 }
@@ -121,16 +124,21 @@ p {
   transform: scale(0);
   background: -webkit-linear-gradient(
     top,
-    #2196f3 0%,
-    #2196f3 50%,
-    #ffc107 50%,
-    #ffc107 100%
+    #ffc107 0%,
+    #ffc107 45%,
+    #2434ff 45%,
+    #2434ff 75%,
+    #f23939 75%,
+    #f23939 100%
   );
   background: linear-gradient(
-    #2196f3 0%,
-    #2196f3 50%,
-    #ffc107 50%,
-    #ffc107 100%
+    top,
+    #ffc107 0%,
+    #ffc107 45%,
+    #2434ff 45%,
+    #2434ff 75%,
+    #f23939 75%,
+    #f23939 100%
   );
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -216,6 +224,12 @@ p {
 .profile-social-links li a img,
 .profile-social-links li a svg {
   width: 24px;
+}
+
+.hoverZoomLink {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
 }
 
 @-webkit-keyframes init {
