@@ -7,11 +7,31 @@ import './style.css';
  * ----------------------------------------------
  * */
 
-const fullName = 'John Doe';
-
 function getFullName(user: User): string {
   return fullName;
 }
+
+type Position = 'Developer' | 'QA';
+
+interface User {
+  firstname: String;
+  lastname: String;
+  imageUrl: String;
+  resume: String;
+  position: Position;
+  phone: Number;
+}
+
+const user: User = {
+  firstname: 'Diego',
+  lastname: 'Hernandez',
+  imageUrl: 'https://down.imgspng.com/download/0720/thinking_man_PNG11606.png',
+  resume: 'Hi, I am frontend developer',
+  phone: 3004567892,
+  position: 'Developer',
+};
+
+const fullName = 'John Doe';
 
 /**
  * ----------------------------------------------
@@ -36,7 +56,7 @@ appDiv.innerHTML = `
 
     <!-- and role or location -->
     <h2>
-      Position
+      ${user.position} - (Phone)
     </h2>
   </header>
 
